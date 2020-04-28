@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>Login</title>
+      <title>Register</title>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -10,18 +10,35 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="./css/login.css">
+      <link rel="stylesheet" type="text/css" href="./css/register.css">
       <link rel="stylesheet" type="text/css" href="./css/main.css">
    </head>
    <body>
+   <script>
+      function redirect_login() {
+	     window.location.href = '/login';
+}
+   </script>
       <div class="container">
          <div class="d-flex justify-content-center h-100">
             <div class="card">
                <div class="card-header text-center">
-                  <h3>Login</h3>
+                  <h3>Register</h3>
                </div>
                <div class="card-body">
                   <form>
+                     <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fa fa-user fa-lg"></i></span>
+                        </div>
+                        <input id="id_1" type="text" class="form-control" placeholder="BITS ID Member 1">
+                     </div>
+                     <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text"><i class="fa fa-user fa-lg"></i></span>
+                        </div>
+                        <input id="id_2" type="text" class="form-control" placeholder="BITS ID Member 2">
+                     </div>
                      <div class="input-group form-group">
                         <div class="input-group-prepend">
                            <span class="input-group-text"><i class="fa fa-user fa-lg"></i></span>
@@ -34,15 +51,16 @@
                         </div>
                         <input id="password" type="password" class="form-control" placeholder="password">
                      </div>
-                     <div class="form-group submit-button">
-                        <input type="submit" value="Login" class="btn float-right submit_btn">
+                     <div id="submit" class="form-group submit-button">
+                        <input type="submit" value="Register" class="btn float-right submit_btn">
                      </div>
                   </form>
+                  <button class="login" onclick="redirect_login()">Login</button>
                </div>
             </div>
          </div>
       </div>
-   <script src="js/login.js"></script>
+      <script src="js/register.js"></script>
    </body>
 </html>
 
